@@ -1,13 +1,6 @@
 import { motion } from 'framer-motion'
 import Hero3D from './Hero3D'
 
-const stats = [
-  { number: '15+', label: 'Años de Experiencia' },
-  { number: '500+', label: 'Proyectos Completados' },
-  { number: '200+', label: 'Clientes Satisfechos' },
-  { number: '24/7', label: 'Soporte Técnico' },
-]
-
 export default function Hero() {
   return (
     <section id="inicio" className="relative min-h-screen flex items-center justify-center overflow-hidden">
@@ -41,8 +34,8 @@ export default function Hero() {
             transition={{ duration: 0.8, delay: 1 }}
             className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto"
           >
-            Transformamos tu negocio con soluciones tecnológicas de vanguardia.
-            Especialistas en CCTV, redes empresariales, fibra óptica y desarrollo de software.
+            Soluciones empresariales de tecnología en Costa Rica. 
+            Especialistas en CCTV, redes, fibra óptica, control de acceso y desarrollo de software.
           </motion.p>
           
           <motion.div
@@ -67,28 +60,6 @@ export default function Hero() {
               Contáctanos
             </motion.button>
           </motion.div>
-        </motion.div>
-        
-        {/* Stats */}
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 1.5 }}
-          className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-8"
-        >
-          {stats.map((stat, index) => (
-            <motion.div
-              key={stat.label}
-              initial={{ opacity: 0, scale: 0.5 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ delay: 1.8 + index * 0.1, duration: 0.5 }}
-              whileHover={{ scale: 1.1, y: -10 }}
-              className="glass-effect p-6 rounded-2xl backdrop-blur-sm"
-            >
-              <div className="text-4xl md:text-5xl font-bold gradient-text mb-2">{stat.number}</div>
-              <div className="text-gray-400 text-sm md:text-base">{stat.label}</div>
-            </motion.div>
-          ))}
         </motion.div>
       </div>
       
